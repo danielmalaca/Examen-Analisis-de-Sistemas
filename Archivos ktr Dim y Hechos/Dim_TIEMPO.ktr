@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Dim Tiempo</name>
+    <description>Transformaci&#xc3;&#xb3;n para la creaci&#xc3;&#xb3;n de la dimensi&#xc3;&#xb3;n tiempo</description>
+    <extended_description/>
+    <trans_version>1.0</trans_version>
+    <trans_type>Normal</trans_type>
+    <trans_status>1</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit/>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user/>
+  <created_date>2014&#x2f;08&#x2f;05 19&#x3a;35&#x3a;33.662</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2010&#x2f;05&#x2f;10 20&#x3a;36&#x3a;17.449</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Generamos una fecha&#x3a;&#xa; 01 de Enero de 2008</note>
+      <xloc>104</xloc>
+      <yloc>9</yloc>
+      <width>158</width>
+      <heigth>44</heigth>
+      <fontname>Ubuntu</fontname>
+      <fontsize>11</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Generamos una secuencia&#xa;de numeros, empezando&#xa;por 1, que luego sumaremos&#xa;a la fecha</note>
+      <xloc>17</xloc>
+      <yloc>256</yloc>
+      <width>199</width>
+      <heigth>78</heigth>
+      <fontname>Ubuntu</fontname>
+      <fontsize>11</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Filtramos las fechas&#xa;mayores de&#xa;31 de Dic de 2025</note>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
+      <width>144</width>
+      <heigth>61</heigth>
+      <fontname>Ubuntu</fontname>
+      <fontsize>11</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Formula para algunos &#xa;calculos de campos</note>
+      <xloc>562</xloc>
+      <yloc>152</yloc>
+      <width>158</width>
+      <heigth>44</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Java para generar &#xa;resto campos</note>
+      <xloc>516</xloc>
+      <yloc>7</yloc>
+      <width>132</width>
+      <heigth>44</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Ordeno campos&#xa;antes insertar</note>
+      <xloc>797</xloc>
+      <yloc>16</yloc>
+      <width>117</width>
+      <heigth>44</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Insercion en tabla&#xa;DWD_TIEMPO</note>
+      <xloc>820</xloc>
+      <yloc>167</yloc>
+      <width>128</width>
+      <heigth>44</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>dw_aplicacion_base</name>
+    <server>192.168.1.8</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>dw_aplicacion_base</database>
+    <port>3306</port>
+    <username>daniel</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79aa71d09baad6</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>EnoBI</name>
+    <server>pcserver7</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>enobi</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4f34afb2086c1fa8a</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>ENOBI_MYSQL</name>
+    <server>PCSERVER7</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>ENOBI</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4f34afb2086c1fa8a</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>ENOBI_ORACLE</name>
+    <server>pcserver7</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>enobi</database>
+    <port>1521</port>
+    <username>enobi</username>
+    <password>Encrypted 2be98afc86aa7f2e4f34afb2086c1fa8a</password>
+    <servername/>
+    <data_tablespace>dwd</data_tablespace>
+    <index_tablespace>dwi</index_tablespace>
+    <attributes>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Calcular Fechas</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculo de Textos</from><to>Calculo Resto Atributos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculo Resto Atributos</from><to>Ordena Valores</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generar Fecha</from><to>A&#xf1;adir_1_dia</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Rechazar fechas &#x3e; 31.12.2020</to><enabled>Y</enabled> </hop>
+  <hop> <from>A&#xf1;adir_1_dia</from><to>Calcular Fechas</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Calculo de Textos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordena Valores</from><to>Table output</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>A&#xf1;adir_1_dia</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>dias_a_sumar</valuename>
+      <use_database>N</use_database>
+      <connection>EnoBI</connection>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>0</start_at>
+      <increment_by>1</increment_by>
+      <max_value>10000</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>165</xloc>
+      <yloc>196</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calcular Fechas</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>fecha_id</field_name>
+<calc_type>ADD_DAYS</calc_type>
+<field_a>fecha_fija</field_a>
+<field_b>dias_a_sumar</field_b>
+<field_c/>
+<value_type>Date</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask>yyyyMMdd</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>fecha_sk_aux</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask>yyyyMMdd</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>fecha_sk</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>fecha_sk_aux</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>valor1</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>1</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>diames_id</field_name>
+<calc_type>DAY_OF_MONTH</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>diaano_id</field_name>
+<calc_type>DAY_OF_YEAR</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>semanan_id</field_name>
+<calc_type>WEEK_OF_YEAR_ISO8601</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>mesn_id</field_name>
+<calc_type>MONTH_OF_DATE</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>anyo_id</field_name>
+<calc_type>YEAR_OF_DATE</calc_type>
+<field_a>fecha_id</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>anyo_ant_id</field_name>
+<calc_type>SUBTRACT</calc_type>
+<field_a>anyo_id</field_a>
+<field_b>valor1</field_b>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>314</xloc>
+      <yloc>29</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculo Resto Atributos</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel/>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#x2f;&#x2f;Create a Locale according to the specified language code&#xa;var locale &#x3d; new java.util.Locale&#x28;&#x22;es&#x22;,&#x22;es&#x22;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;Create a calendar, use the specified initial date&#xa;var calendar &#x3d; new java.util.GregorianCalendar&#x28;locale&#x29;&#x3b;&#xa;calendar.setTime&#x28;fecha_id&#x29;&#x3b;&#xa;&#xa;&#xa;var simpleDateFormat   &#x3d; java.text.SimpleDateFormat&#x28;&#x22;D&#x22;,locale&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Monday&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;EEEE&#x22;&#x29;&#x3b;&#xa;var diasem_desc       &#x3d; simpleDateFormat.format&#x28;fecha_id&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;September&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MMMM&#x22;&#x29;&#x3b;&#xa;var mesn_desc         &#x3d; simpleDateFormat.format&#x28;fecha_id&#x29;&#x3b;&#xa;&#xa;var trimn_id&#x3b;&#xa;switch&#x28;parseInt&#x28;mesn_id&#x29;&#x29;&#x7b;&#xa;    case 1&#x3a; case 2&#x3a; case 3&#x3a; trimn_id &#x3d; 1&#x3b; break&#x3b;&#xa;    case 4&#x3a; case 5&#x3a; case 6&#x3a; trimn_id &#x3d; 2&#x3b; break&#x3b;&#xa;    case 7&#x3a; case 8&#x3a; case 9&#x3a; trimn_id &#x3d; 3&#x3b; break&#x3b;&#xa;    case 10&#x3a; case 11&#x3a; case 12&#x3a; trimn_id &#x3d; 4&#x3b; break&#x3b;&#xa;&#x7d;&#xa;&#x2f;&#x2f; Fecha en formato descripcion 1 de junio de 2009&#xa;var fecha_desc &#x3d; diames_id.toString&#x28;&#x29; &#x2b; &#x22; de &#x22; &#x2b; mesn_desc &#x2b;&#xa;                 &#x22; de &#x22; &#x2b; anyo_id.toString&#x28;&#x29;&#x3b;&#xa;&#x2f;&#x2f; Mes en formato descripcion junio de 2010&#xa;var mes_desc &#x3d; mesn_desc &#x2b; &#x22; de &#x22; &#x2b; anyo_id.toString&#x28;&#x29;&#x3b;&#xa;&#x2f;&#x2f; Trimestre Identificador 20081,20082, 20083&#xa;var trim_id &#x3d; anyo_id.toString&#x28;&#x29; &#x2b; trimn_id.toString&#x28;&#x29;&#x3b;&#xa;&#x2f;&#x2f; Trimestre Descripcion 1 Trim 2008&#xa;var trim_desc &#x3d; trimn_id.toString&#x28;&#x29; &#x2b; &#x22; Trim &#x22; &#x2b; anyo_id.toString&#x28;&#x29;&#x3b;&#xa;&#x2f;&#x2f; Trimestre Descripcion 1 Trimestre, 2 Trimestre&#xa;var trimn_desc &#x3d; trimn_id.toString&#x28;&#x29; &#x2b; &#x22; Trim&#x22;&#x3b;&#xa;&#x2f;&#x2f;Indicador si una fecha es festivo&#xa;var es_festivo_id&#x3b;&#xa;if&#x28;diasem_id &#x3e; 6&#x29;&#x7b;&#xa;    es_festivo_id &#x3d; &#x27;S&#x27;&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    es_festivo_id &#x3d; &#x27;N&#x27;&#x3b;&#xa;&#x7d;&#xa;&#x2f;&#x2f;Indicador si una fecha es fin de semana&#xa;var es_finde_id&#x3b;&#xa;if&#x28;diasem_id &#x3e; 5&#x29;&#x7b;&#xa;    es_finde_id &#x3d; &#x27;S&#x27;&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    es_finde_id &#x3d; &#x27;N&#x27;&#x3b;&#xa;&#x7d;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>trimn_id</name>
+        <rename>trimn_id</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>diasem_desc</name>
+        <rename>diasem_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>mesn_desc</name>
+        <rename>mesn_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>fecha_desc</name>
+        <rename>fecha_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>mes_desc</name>
+        <rename>mes_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>trim_id</name>
+        <rename>trim_id</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>trim_desc</name>
+        <rename>trim_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>trimn_desc</name>
+        <rename>trimn_desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>es_festivo_id</name>
+        <rename>es_festivo_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>es_finde_id</name>
+        <rename>es_finde_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>475</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculo de Textos</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>semana_id</field_name>
+<formula_string> Text &#x28; Abs&#x28; &#x5b;anyo_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x23;&#x23;&#x22; &#x29; &#x26;   IF&#x28; &#x5b;semanan_id&#x5d; &#x3c; 10 &#x3b; &#x22;0&#x22; &#x26; Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x3b;Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>semana_desc</field_name>
+<formula_string> &#x22;Semana &#x22; &#x26; IF&#x28; &#x5b;semanan_id&#x5d; &#x3c; 10 &#x3b; &#x22;0&#x22; &#x26; Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x3b;Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x29; &#x26; &#x22; de &#x22; &#x26; Text &#x28; Abs&#x28; &#x5b;anyo_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x23;&#x23;&#x22; &#x29;    </formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>mes_id</field_name>
+<formula_string>Text &#x28; Abs&#x28; &#x5b;anyo_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x23;&#x23;&#x22; &#x29; &#x26;   IF&#x28; &#x5b;mesn_id&#x5d; &#x3c; 10 &#x3b; &#x22;0&#x22; &#x26; Text &#x28;  Abs&#x28;&#x5b;mesn_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x3b;Text &#x28;  Abs&#x28;&#x5b;mesn_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>diasem_id</field_name>
+<formula_string>weekday &#x28; &#x5b;fecha_id&#x5d;&#x3b;2&#x29;</formula_string>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>semanan_desc</field_name>
+<formula_string>&#x22;Semana &#x22;  &#x26; IF&#x28; &#x5b;semanan_id&#x5d; &#x3c; 10 &#x3b; &#x22;0&#x22; &#x26; Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x3b;Text &#x28;  Abs&#x28;&#x5b;semanan_id&#x5d;&#x29;  &#x3b; &#x22;&#x23;&#x23;&#x22; &#x29; &#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>521</xloc>
+      <yloc>189</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Calculo de Textos</send_true_to>
+<send_false_to>Rechazar fechas &#x3e; 31.12.2020</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>fecha_id</leftvalue>
+ <function>&#x3c;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Date</type><text>2021&#x2f;01&#x2f;01 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyyMMdd</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>189</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Generar Fecha</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>fecha_fija</name>
+        <type>Date</type>
+        <format>yyyyMMdd</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>20080101</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>10000</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>46</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Ordena Valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>fecha_sk</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>fecha_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>fecha_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>diasem_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>diasem_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>diames_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>diaano_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>semana_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>semana_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>semanan_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>semanan_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>es_festivo_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>es_finde_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>mes_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>mes_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>mesn_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>mesn_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>trim_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>trim_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>trimn_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>trimn_desc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>anyo_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>anyo_ant_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>753</xloc>
+      <yloc>58</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rechazar fechas &#x3e; 31.12.2020</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>322</xloc>
+      <yloc>306</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_aplicacion_base</connection>
+    <schema/>
+    <table>fecha</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>idFecha</column_name>
+          <stream_name>fecha_sk</stream_name>
+        </field>
+        <field>
+          <column_name>Dias</column_name>
+          <stream_name>diames_id</stream_name>
+        </field>
+        <field>
+          <column_name>Mes</column_name>
+          <stream_name>mesn_desc</stream_name>
+        </field>
+        <field>
+          <column_name>Anio</column_name>
+          <stream_name>anyo_id</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>803</xloc>
+      <yloc>212</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
