@@ -20,8 +20,8 @@
 					<a href="crearGrado.php" class="btn btn-success">Grado</a>
 					<a href="crearEstudiante.php" class="btn btn-success">Estudiantes</a>
 					<a href="CrearMatricula.php" class="btn btn-success">Matricula</a>
-					<a href="CuboEstudiantesBD.html" class="btn btn-success">Reporte Estudiantes en BD</a>
-					<a href="CuboEstudiantesBD.html" class="btn btn-success">Reporte Estudiantes Matriculados</a>
+					<a href="Cubo_Estudiantes_BD.html" class="btn btn-success">Reporte Estudiantes en BD</a>
+					<a href="Cubo_Estudiantes_Matriculados.html" class="btn btn-success">Reporte Estudiantes Matriculados</a>
 				</p>
 	    	</div>
 
